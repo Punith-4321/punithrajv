@@ -1,0 +1,82 @@
+//c program to check wheather the number is positive
+
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else {
+        printf("The number is not positive.\n");
+    }
+    return 0;
+}
+
+
+//c program to check voting eligblity
+#include <stdio.h>
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    if (age >= 18) {
+        printf("You are eligible to vote.\n");
+    } else {
+        printf("You are NOT eligible to vote.\n");
+    }
+    return 0;
+}
+
+
+//c program to find largest amoung 3 numbers
+#include <stdio.h>
+int main() {
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a >= b && a >= c) {
+        printf("%d is the largest.\n", a);
+    }
+    else if (b >= a && b >= c) {
+        printf("%d is the largest.\n", b);
+    }
+    else {
+        printf("%d is the largest.\n", c);
+    }
+    return 0;
+}
+
+
+//write a c programm a simple calculator using switch case
+#include <stdio.h>
+int main() {
+    char operator;
+    double num1, num2;
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operater)
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+    switch (operator) {
+        case '+':
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
+            break;
+        case '-':
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
+            break;
+        case '*':
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
+            break;
+        case '/':
+            // Handle division by zero
+            if (num2 != 0) {
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
+            } else {
+                printf("Error! Division by zero is not allowed.\n");
+            }
+            break;
+        default:
+            printf("Error! Invalid operator.\n");
+    }
+    return 0;
+}
